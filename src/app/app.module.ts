@@ -14,6 +14,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MerchComponent } from './merch/merch.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     PageNotFoundComponent,
     NavigationComponent,
+    MerchComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     TooltipModule.forRoot(),
     CollapseModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

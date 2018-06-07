@@ -1,0 +1,23 @@
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="/assets/merch.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Sveni T-shirt</h5>
+      <p class="card-text">Aus Interesse werde Ich die Klicks sammeln und gucken was dabei rum kommt. Öffters Klicken bringt nichts ;)</p>
+      <a class="card-link cursor-click" (click)="onLike()" *ngIf="canVote" [hidden]="!canVote">Ich will eins <i class="fa fa-thumbs-up"></i></a>
+      <a class="card-link cursor-click" (click)="onDislike()" *ngIf="canVote" [hidden]="!canVote">Ich will keins <i class="fa fa-thumbs-down"></i></a>
+    </div>
+    <div class="card-footer text-muted">
+     {{ like }} <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+     {{ dislike }} <i class="fa fa-thumbs-down"></i>
+    </div>
+  </div>
+  <div class="card text-white bg-secondary mb-3" style="max-height: 8rem;">
+    <div class="card-body">
+      <h5 class="card-title">Coming soon</h5>
+      <p class="card-text">Vielleicht ist mehr in Arbeit vielleicht auch nicht.</p>
+    </div>
+  </div>
+</div>
+<p>
+</p>

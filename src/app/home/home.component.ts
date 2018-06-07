@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  lastNews: Date;
+
   constructor() { }
 
   ngOnInit() {
+    var time = { time: new Date() };
+    var lNews = localStorage.getItem('lastNews');
+    if (lNews) {
+      this.lastNews = JSON.parse(lNews).time;
+    }
+    localStorage.setItem('lastNews', JSON.stringify(time));
+
   }
 
 }

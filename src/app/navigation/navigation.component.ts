@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+
+  //@ViewChild navbar;
+  navigation = [{ name: 'home', label: 'Home' }, { name: 'about', label: 'About' }];
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
